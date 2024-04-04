@@ -12,6 +12,7 @@ migrate_working_dir/
 get_together/lib/firebase_options.dart
 get_together/ios/Runner/GoogleService-Info.plist
 get_together/macos/Runner/GoogleService-Info.plist
+get_together/GoogleService-Info.plist
 
 # IntelliJ related
 *.iml
