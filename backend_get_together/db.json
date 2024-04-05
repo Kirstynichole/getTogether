@@ -2,16 +2,16 @@
     "events": [
         {
             "id": "1",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Just Salad",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/ohBvXWiqf2RIiGuqMHUnwg/o.jpg",
             "location": "55 Broadway",
-            "info": "salad",
+            "info": "Salad",
             "date": ""
         },
         {
             "id": "2",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "CasAmigos",
             "photo": "",
             "location": "Pearl St. & Broad St.",
@@ -20,7 +20,7 @@
         },
         {
             "id": "3",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Underground Pizza",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/a6P1kw34CNDT49Vq5TmyDA/o.jpg",
             "location": "3 Hanover Sq.",
@@ -29,7 +29,7 @@
         },
         {
             "id": "4",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Leo's Bagels",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/8iQiw80o6ep1ltOLuD-FLw/o.jpg",
             "location": "3 Hanover Sq.",
@@ -38,7 +38,7 @@
         },
         {
             "id": "5",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Brooklyn Beef N' Cheese",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/PQCw2NfOMGIvOGnsVxx0sg/o.jpg",
             "location": "70 Pine St",
@@ -47,7 +47,7 @@
         },
         {
             "id": "6",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Bravo Pizza",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/ZazN0mTM28i5s0VztBIvfQ/o.jpg",
             "location": "17 Trinity Pl.",
@@ -56,7 +56,7 @@
         },
         {
             "id": "7",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Coney Shack",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/gHZnBhXFXxL73Ym86Cedkg/o.jpg",
             "location": "100 Pearl St.",
@@ -65,7 +65,7 @@
         },
         {
             "id": "8",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Extra Sauce",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/Iglj_OhnzwS5khmTaceGLw/o.jpg",
             "location": "100 Pearl St.",
@@ -74,7 +74,7 @@
         },
         {
             "id": "9",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "CAVA",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/iNkHkB9oR4xj7spwPb8qaA/o.jpg",
             "location": "63 Wall St.",
@@ -83,7 +83,7 @@
         },
         {
             "id": "10",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Cafe 11",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/EoGObZ4Nxk_W2v1PDGA7tw/o.jpg",
             "location": "11 Broadway",
@@ -92,7 +92,7 @@
         },
         {
             "id": "11",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Poke Bowl",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/-85wuhmZj0mMHS1StQj7cg/o.jpg",
             "location": "80 Broad St.",
@@ -101,7 +101,7 @@
         },
         {
             "id": "12",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "77 Burger",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/LMyx2LSatxFB_eEtBlzRqg/o.jpg",
             "location": "77 Pearl St.",
@@ -110,7 +110,7 @@
         },
         {
             "id": "13",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Street Cook",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/7jxor1P132mi5qz6Jm4oiw/o.jpg",
             "location": "7 Hanover St.",
@@ -119,7 +119,7 @@
         },
         {
             "id": "14",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Yip's",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/24e3PuTSDW76jd72gNr86g/o.jpg",
             "location": "18 Beaver St.",
@@ -128,7 +128,7 @@
         },
         {
             "id": "15",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Le Pain Quotidien",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/jI2yOX9NBLh-BlRL4kxP-g/o.jpg",
             "location": "85 Broad St.",
@@ -137,7 +137,7 @@
         },
         {
             "id": "16",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Sweetgreen",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/FjR3JXtoxTjOd8WDxjTUVA/o.jpg",
             "location": "67 Wall St.",
@@ -146,7 +146,7 @@
         },
         {
             "id": "17",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Pret A Manger",
             "photo": "",
             "location": "60 Broad St.",
@@ -155,7 +155,7 @@
         },
         {
             "id": "18",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Goku Kitchen",
             "photo": "https://s3-media0.fl.yelpcdn.com/bphoto/DmayhvmoAfMETYRm-pgcgA/o.jpg",
             "location": "26 Cedar St.",
@@ -164,7 +164,7 @@
         },
         {
             "id": "19",
-            "event_type": "restaurant",
+            "event_type": "Restaurant",
             "name": "Bento",
             "photo": "",
             "location": "173 Broadway",
