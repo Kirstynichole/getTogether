@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:get_together/pages/settings_page.dart';
+import 'package:get_together/pages/friends_page';
+import 'package:get_together/pages/profile_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -39,19 +38,37 @@ class MyDrawer extends StatelessWidget {
               },
             ),
           ),
-
+        
           Padding(
             padding: EdgeInsets.only(left: 25.0),
             child: ListTile(
-              title: Text("SETTINGS"),
-              leading: Icon(Icons.settings),
+              title: Text("FRIENDS"),
+              leading: Icon(Icons.people),
               onTap: () {
                 Navigator.pop(context);
 
                 Navigator.push(
                   context, 
                   MaterialPageRoute(
-                    builder: (context) => SettingsPage(),
+                    builder: (context) => FriendsPage(),
+                    ),
+                  );
+              },
+            ),
+          ),
+        
+          Padding(
+            padding: EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              title: Text("PROFILE"),
+              leading: Icon(Icons.person),
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
                     ),
                   );
               },

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,34 +21,56 @@ class _RegisterPageState extends State<RegisterPage> {
   final passwordController = TextEditingController();
   final confirmedPasswordController = TextEditingController();
 
-  void signUserUp() async {
-    //show loading circle
-    showDialog(
-        context: context,
-        builder: (context) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        });
-    //try creating user
-    try {
-      //check confirmed password vs password
-      if (passwordController.text == confirmedPasswordController.text) {
-        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+void signUserUp() async {
+  // Show loading circle
+  showDialog(
+    context: context,
+    builder: (context) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+  );
+  
+  // Try creating user
+  try {
+    // Check confirmed password vs password
+    if (passwordController.text == confirmedPasswordController.text) {
+      // Create user in Firebase Authentication
+      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,
       );
-      } else {
-        //show error message
+
+      // Create user document in Firestore
+      
+      await FirebaseFirestore.instance.collection('users').doc(userCredential.user!.uid).set({
+        'username': emailController.text.split('@')[0],
+        'username_lowercase': emailController.text.split('@')[0].toLowerCase(),
+        'email': emailController.text,
+        'interests': [],
+        'friends': [], // Initialize friends as empty array
+      });
+
+      // Navigate to the next screen or perform any other action
+    } else {
+      // Show error message
+      if (mounted) {
         invalidInputMessage("Oops! Passwords don't match.");
       }
-
+    }
+    
+    if (mounted) {
       Navigator.pop(context);
-    } catch (e) {
+    }
+  } catch (e) {
+    if (mounted) {
       Navigator.pop(context);
       invalidInputMessage("Oops! Something went wrong.");
     }
   }
+}
+
 
   void invalidInputMessage(String message) {
     showDialog(
