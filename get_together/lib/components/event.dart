@@ -26,4 +26,15 @@ class Event {
       photo: json['photo'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+  return {
+    'date': date,
+    'event_type': eventType,
+    'info': info,
+    'location': location,
+    'name': name,
+    'photo': photo,
+  };
+}
 }

@@ -1,5 +1,6 @@
 // event_service.dart
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get_together/components/event.dart';
 import 'package:get_together/components/event.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -15,4 +16,8 @@ Future<List<Event>> fetchEvents() async {
   } else {
     throw Exception('Failed to load events');
   }
+
+  
 }
+
+

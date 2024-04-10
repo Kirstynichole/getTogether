@@ -64,12 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
                     onPressed: () => editField('email'),
                   ),
                   TextBox(
-                    text: (userData['interests'] as List<dynamic>).join(','),
+                    text: (userData['interests'] as List<dynamic>).join(', '),
                     sectionName: "Interests",
                     onPressed: () => editField('interests'),
                   ),
                   TextBox(
-                    text: (userData['friends'] as List<dynamic>).join(','),
+                    text: (userData['friends'] as List<dynamic>).join(', '),
                     sectionName: "Friends",
                     onPressed: () => editField('friends')
                   ),

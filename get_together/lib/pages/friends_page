@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // Ensure FirebaseAuth is imported
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class FriendsPage extends StatefulWidget {
-  const FriendsPage({Key? key}) : super(key: key); // Adjusted for null safety
+  const FriendsPage({Key? key}) : super(key: key); 
 
   @override
   State<FriendsPage> createState() => _FriendsPageState();
@@ -13,8 +13,7 @@ class _FriendsPageState extends State<FriendsPage> {
   final TextEditingController _searchController = TextEditingController();
   List<String> _friendsList = [];
   List<String> _searchResults = [];
-  final FirebaseAuth _auth = FirebaseAuth.instance; // Reference to FirebaseAuth
-
+  final FirebaseAuth _auth = FirebaseAuth.instance; 
   @override
   void initState() {
     super.initState();
@@ -41,7 +40,7 @@ class _FriendsPageState extends State<FriendsPage> {
         .get();
 
     final searchResults = querySnapshot.docs
-        .map((doc) => doc.data()['username'].toString()) // Display the actual 'username' field
+        .map((doc) => doc.data()['username'].toString())
         .toList();
 
     setState(() {
@@ -62,7 +61,7 @@ class _FriendsPageState extends State<FriendsPage> {
           }
         }
       });
-      _loadFriendsList(); // Consider moving this outside if this function is awaited elsewhere
+      _loadFriendsList();
     }
   }
 
