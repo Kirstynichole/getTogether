@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_together/components/event.dart';
+import 'package:get_together/models/event.dart';
 import 'package:get_together/components/my_drawer.dart';
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
 import 'package:get_together/components/event_card.dart'; 

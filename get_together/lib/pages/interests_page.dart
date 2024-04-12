@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:get_together/components/event.dart';
+import 'package:get_together/models/event.dart';
 
 class InterestsPage extends StatefulWidget {
   const InterestsPage({super.key});
@@ -31,8 +31,11 @@ Future<List<Event>> fetchInterests() async {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('Interests'),
+      appBar: AppBar(
+        title: Text("Interests"),
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey,
+        elevation: 0,
         ),
         body: FutureBuilder<List<Event>>(
             future: fetchInterests(),

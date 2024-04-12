@@ -45,6 +45,7 @@ void signUserUp() async {
       // Create user document in Firestore
       
       await FirebaseFirestore.instance.collection('users').doc(userCredential.user!.uid).set({
+        'uid': userCredential.user!.uid,
         'username': emailController.text.split('@')[0],
         'username_lowercase': emailController.text.split('@')[0].toLowerCase(),
         'email': emailController.text,

@@ -69,8 +69,11 @@ class _FriendsPageState extends State<FriendsPage> {
 Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Friends'),
-      ),
+        title: Text("Friends"),
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey,
+        elevation: 0,
+        ),
       body: Column(
         children: [
           Padding(

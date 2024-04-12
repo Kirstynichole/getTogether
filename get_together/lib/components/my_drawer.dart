@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get_together/pages/friends_page';
+import 'package:get_together/pages/chat_page.dart';
+import 'package:get_together/pages/friends_page.dart';
 import 'package:get_together/pages/interests_page.dart';
 import 'package:get_together/pages/profile_page.dart';
 
@@ -70,6 +71,24 @@ class MyDrawer extends StatelessWidget {
                   context, 
                   MaterialPageRoute(
                     builder: (context) => const FriendsPage()
+                    ),
+                  );
+              },
+            ),
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              title: Text("MESSAGES"),
+              leading: Icon(Icons.chat_rounded),
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ChatPage(),
                     ),
                   );
               },
