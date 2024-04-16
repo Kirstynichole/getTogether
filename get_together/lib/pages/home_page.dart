@@ -18,7 +18,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late Future<List<Event>> futureEvents;
-  bool _noMoreEvents = false; //manage the display state
+  bool _noMoreEvents = false;
 
 
   @override
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             });
           }
         } else {
-          // If there are no interests array, create one and add the event.
+          // If there is no interests array, create one and add the event.
           transaction.set(userDocRef, {
             'interests': [eventMap]
           });
@@ -90,15 +90,17 @@ class _HomePageState extends State<HomePage> {
                     if (dir == Direction.right) {
                       _addInterest(widget.event);
                     }
-                    // Check if this is the last card
                     if (index == events.length - 1) {
                       setState(() {
                         _noMoreEvents = true;
                       });
                     } else {
-                      // Add a new card only if the index is within the range
-                      if (index + 1 < events.length) {
-                        _cardController.addItem(EventCard(event: events[index + 1]));
+                      // if (index + 1 < events.length) {
+                      //   _cardController.addItem(EventCard(event: events[index + 1]));
+                      // }
+                      int startIndex = index + 3;
+                      if (startIndex < events.length) {
+                        _cardController.addItem(EventCard(event: events[startIndex]));
                       }
                     }
                   },

@@ -120,7 +120,7 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 25.0, bottom: 25),
             child: ListTile(
               title: Text("LOGOUT", style: GoogleFonts.robotoMono()),
-              leading: const Icon(Icons.settings),
+              leading: const Icon(Icons.logout),
               onTap: signUserOut,
             ),
           ),

@@ -27,10 +27,12 @@ Future<List<Event>> fetchEvents() async {
   allEvents.addAll(await fetchLocalEvents());
 
   // Fetch NYC.gov events
-  allEvents.addAll(await fetchNYCEvents());
+  // allEvents.addAll(await fetchNYCEvents());
 
   // Fetch Ticketmaster events
   allEvents.addAll(await fetchTicketmasterEvents());
+
+  allEvents.shuffle();
 
   return allEvents;
 }
@@ -48,20 +50,20 @@ Future<List<Event>> fetchLocalEvents() async {
 }
 
 // Fetch NYC.gov events
-Future<List<Event>> fetchNYCEvents() async {
-  final urlNYC = Uri.parse("https://api.nyc.gov/calendar/search?startDate=04%2F20%2F2024%2012:00%20AM&endDate=12%2F31%2F2024%2012:00%20AM&boroughs=Bk%20OR%20Mn%20OR%20Qn&sort=DATE");
-  final responseNYC = await http.get(urlNYC, headers: {
-    'Cache-Control': 'no-cache',
-    'Ocp-Apim-Subscription-Key': '',
-  });
-  if (responseNYC.statusCode == 200) {
-    final dataNYC = json.decode(responseNYC.body);
-    List<dynamic> nycEventsJson = dataNYC['items'];
-    return nycEventsJson.map((json) => Event.fromJson(json)).toList();
-  } else {
-    throw Exception('Failed to load NYC.gov events: ${responseNYC.statusCode}');
-  }
-}
+// Future<List<Event>> fetchNYCEvents() async {
+//   final urlNYC = Uri.parse("https://api.nyc.gov/calendar/search?startDate=04%2F19%2F2024%2012:00%20AM&endDate=12%2F30%2F2024%2012:00%20AM&sort=DATE");
+//   final responseNYC = await http.get(urlNYC, headers: {
+//     'Cache-Control': 'no-cache',
+//     'Ocp-Apim-Subscription-Key': '',
+//   });
+//   if (responseNYC.statusCode == 200) {
+//     final dataNYC = json.decode(responseNYC.body);
+//     List<dynamic> nycEventsJson = dataNYC['items'];
+//     return nycEventsJson.map((json) => Event.fromJson(json)).toList();
+//   } else {
+//     throw Exception('Failed to load NYC.gov events: ${responseNYC.statusCode}');
+//   }
+// }
 
 // Fetch Ticketmaster events (with unique names)
 Future<List<Event>> fetchTicketmasterEvents() async {

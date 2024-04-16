@@ -92,18 +92,18 @@ Widget build(BuildContext context) {
                 obscureText: true,
               ),
               SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.end,
+              //     children: [
+              //       Text(
+              //         'Forgot Password?',
+              //         style: TextStyle(color: Colors.grey[600]),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(height: 25),
               MyButton(
                 onTap: signUserIn,
