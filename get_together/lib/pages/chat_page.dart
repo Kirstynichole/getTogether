@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:get_together/components/user_tile.dart';
 import 'package:get_together/pages/messaging_page.dart';
 import 'package:get_together/services/auth_service.dart';
 import 'package:get_together/services/chat/chat_services.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class ChatPage extends StatelessWidget {
   ChatPage({super.key});
@@ -15,11 +16,13 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Messages"),
+        title: Text(
+          "Messages",
+          style: GoogleFonts.robotoMono()),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey,
         elevation: 0,
-        ),
+      ),
       body: _buildUserList(),
     );
   }
@@ -29,11 +32,11 @@ class ChatPage extends StatelessWidget {
       stream: _chatService.getUsersStream(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Text("Error");
+          return const Text("Error");
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("Loading...");
+          return const Text("Loading...");
         }
 
         return ListView(
@@ -45,25 +48,32 @@ class ChatPage extends StatelessWidget {
     );
   }
 
-//build individual list tile for user
+  // Build individual list tile for user
   Widget _buildUserListItem(
-      Map<String, dynamic> userData, BuildContext context) {
-    //display all users except current user
-    if (userData['email'] != _authService.getCurrentUser()!.email) {
-      return UserTile(
-      text: userData["email"], 
-      onTap: () {
-        Navigator.push(context, 
-        MaterialPageRoute(
-          builder: (context) => MessagingPage(
-            receiverEmail: userData['email'],
-            receiverID: userData['uid'],
-            ),
-        ),
-        );
-      });
-    } else {
-      return Container();
-    }
+  Map<String, dynamic> userData, BuildContext context) {
+  // Display all users except current user
+  if (userData['email'] != _authService.getCurrentUser()!.email) {
+    return UserTile(
+      text: userData["email"],
+      onTap: (getFriendUsernamesInterestedInEvent) {
+        _handleTileTap(context, userData['email'], userData['uid']);
+      },
+    );
+  } else {
+    return Container();
   }
+}
+
+  // Navigate to messaging page on tile tap
+  void _handleTileTap(BuildContext context, String receiverEmail, String receiverID) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => MessagingPage(
+        receiverEmail: receiverEmail,
+        receiverID: receiverID,
+      ),
+    ),
+  );
+}
 }

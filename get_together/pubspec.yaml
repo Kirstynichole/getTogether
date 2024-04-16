@@ -42,6 +42,8 @@ dependencies:
   google_sign_in: ^6.2.1
   swipeable_card_stack: ^0.0.5
   cloud_firestore: ^4.16.0
+  swipable_stack: ^2.0.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   integration_test:

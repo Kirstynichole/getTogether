@@ -38,7 +38,8 @@ class MessagingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(receiverEmail),
+        title: Text(
+          receiverEmail,),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey,
         elevation: 0,
@@ -120,11 +121,11 @@ class MessagingPage extends StatelessWidget {
             //send button
             Container(
               decoration: const BoxDecoration(
-                color: Colors.green,
+                color: Color.fromRGBO(193, 109, 186, 1),
                 shape: BoxShape.circle,
               ),
               margin: const EdgeInsets.only(right: 25),
-              child: IconButton(onPressed: sendMessage, icon: Icon(Icons.arrow_upward)))
+              child: IconButton(onPressed: sendMessage, icon: const Icon(Icons.arrow_upward)))
           ],
         ),
       ),

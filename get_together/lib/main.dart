@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get_together/pages/auth_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,9 +19,20 @@ class MyApp extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+      theme: ThemeData(
+        useMaterial3: true,
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
+            fontSize: 72,
+            fontWeight: FontWeight.bold,
+          ),
+          bodyMedium: GoogleFonts.robotoMono(),
+          displaySmall: GoogleFonts.robotoMono(),
+        ),
+      ),
+      home: const AuthPage(),
     );
   }
 }

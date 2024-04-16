@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -19,6 +20,7 @@ class MyTextField extends StatelessWidget {
     return Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: TextField(
+              style: GoogleFonts.robotoMono(),
               controller: controller,
               obscureText: obscureText,
               decoration: InputDecoration(
@@ -32,7 +34,9 @@ class MyTextField extends StatelessWidget {
                 fillColor: Color.fromARGB(255, 238, 237, 237),
                 filled: true,
                 hintText: hintText,
-                hintStyle: TextStyle(color: Colors.grey[500]),
+                hintStyle: TextStyle(
+                  color: Colors.grey[500],
+                  fontFamily: GoogleFonts.robotoMono().fontFamily),
               ),
             ),
           );

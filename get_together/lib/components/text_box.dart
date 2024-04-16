@@ -13,11 +13,11 @@ class TextBox extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8)
       ),
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 15,
         bottom: 15
       ),
-      margin: EdgeInsets.only(left: 20, right: 20, top: 20 ),
+      margin: const EdgeInsets.only(left: 20, right: 20, top: 20 ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(

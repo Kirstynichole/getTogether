@@ -179,6 +179,114 @@
             "location": "Volksparkstadion Hamburg, Germany",
             "info": "The Eras Tour",
             "date": "07/24/14"
+        },
+        {
+            "id": "21",
+            "event_type": "Restaurant",
+            "name": "Juliana's Pizza",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipPgmHfjPLo2lvEDaifbZjdRJ8Oczkiv_GX0JFRM=s1360-w1360-h1020",
+            "location": "19 Old Fulton St, Brooklyn, NY",
+            "info": "Pizza",
+            "date": ""
+        },
+        {
+            "id": "22",
+            "event_type": "Broadway",
+            "name": "The Great Gatsby",
+            "photo": "https://static01.nyt.com/images/2024/01/17/multimedia/16gatsby-wmhj/16gatsby-wmhj-superJumbo.jpg?quality=75&auto=webp",
+            "location": "53 and Broadway",
+            "info": "Amazing new musical",
+            "date": "Opened March 2024"
+        },
+        {
+            "id": "23",
+            "event_type": "Museum",
+            "name": "The MET",
+            "photo": "https://cdn.sanity.io/images/cctd4ker/production/b8a5e07c166342e1c7f6fe30b8c45d64fea69ea5-4096x2326.jpg?w=2048&q=75&fit=clip&auto=format",
+            "location": "1000 Fifth Ave 82nd Street, New York, NY",
+            "info": "Art",
+            "date": "Closed Wednesdays"
+        },
+        {
+            "id": "24",
+            "event_type": "Restaurant",
+            "name": "The Meatball Shop",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSkNKswM3hfZ6pfFPjAP5vrE0GVJGRpYR8OgLlz8Va5r9f5pI-Azym85Cfw3WeBDavi6s&usqp=CAU",
+            "location": "789 9th Ave",
+            "info": "Meatballs galore",
+            "date": "Open everyday"
+        },
+        {
+            "id": "25",
+            "event_type": "Restaurant",
+            "name": "Birds of a Feather",
+            "photo": "https://image.resy.com/3/003/2/63241/b294bfc6c382d64443cb2a365b6ebd59708b48ac/jpg/1600x1600",
+            "location": "191 Grand St Brooklyn, NY 11211",
+            "info": "Chinese",
+            "date": ""
+        },
+        {
+            "id": "26",
+            "event_type": "Style event",
+            "name": "NYCxDesign",
+            "photo": "https://nycxdesign.org/wp-content/uploads/2024/02/nyc-x-design-2-photo-courtesy-nyc-x-design-2048x1365-1-scaled.jpg",
+            "location": "Manhattan & Brooklyn",
+            "info": "Design that fuels the world.",
+            "date": "May 16-17"
+        },
+        {
+            "id": "27",
+            "event_type": "Event",
+            "name": "Gotham Jazz Festival 2024",
+            "photo": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F478711869%2F35756721148%2F1%2Foriginal.20230327-172829?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C545%2C4800%2C2400&s=23560bdb7d571a1070cdb9808fd40cb5",
+            "location": "60 Pine Street NY, NY 10005",
+            "info": "Tickets on EventBrite - All Ages",
+            "date": "04/28/24"
+        },
+        {
+            "id": "28",
+            "event_type": "Music Festival",
+            "name": "Governors Ball",
+            "photo": "governors-ball-lineup-2023-1673903417.jpg",
+            "location": "Flushing Meadows, Corona Park",
+            "info": "Lizzo, Odesza, Kenrick Lamar",
+            "date": "June 9-11"
+        },
+        {
+            "id": "29",
+            "event_type": "Comedy",
+            "name": "Jim Gaffigan",
+            "photo": "https://s1.ticketm.net/dbimages/487494a.jpg",
+            "location": "Beacon Theatre, 2124 Broadway",
+            "info": "Laugh, smile and enjoy",
+            "date": "April 28th"
+        },
+        {
+            "id": "30",
+            "event_type": "Culture/Arts event",
+            "name": "BRIC Celebrate Brooklyn!",
+            "photo": "bric-default-image-1024x446.webp",
+            "location": "Brooklyn",
+            "info": "Free music, dance, theater, & film",
+            "date": "May-August"
+        },
+        {
+            "id": "31",
+            "event_type": "Parade",
+            "name": "The Mermaid Parade",
+            "photo": "https://www.nyctourism.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F1aemqu6a6t65%2F2mzJvczQiXDG6RFyL77YTk%2F326534fb8937dd6eac72e7b42ba56797%2FConey-Island-Brooklyn-NYC-Photo-Jonah-Rosenberg-0410.jpg%3Fh%3D%26w%3D800%26fit%3Dfill%26f%3Dtop%26q%3D75%26fm%3Dwebp&w=828&q=75",
+            "location": "Coney Island",
+            "info": "Think Mardi Gras celebration to kick off summer in NYC",
+            "date": "June 22nd"
+        },
+        {
+            "id": "32",
+            "event_type": "Festival",
+            "name": "2024 Hong Kong Dragon Boat Festival",
+            "photo": "https://s1.ticketm.net/dbimages/487494a.jpg",
+            "location": "Flushing Meadows park",
+            "info": "Free - Rain or Shine",
+            "date": "August 3-4"
         }
     ]
 }
