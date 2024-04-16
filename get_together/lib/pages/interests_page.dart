@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -140,7 +139,7 @@ class _InterestsPageState extends State<InterestsPage> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Container(
                         decoration: BoxDecoration( 
                           color: Colors.grey.shade300,
@@ -164,7 +163,7 @@ class _InterestsPageState extends State<InterestsPage> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5,),
+                      const SizedBox(height: 5,),
                       if (isFriendInterest)
                         Container(
                           decoration: BoxDecoration(
@@ -176,7 +175,7 @@ class _InterestsPageState extends State<InterestsPage> {
                               // style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       const Divider(),
                       // if (isFriendInterest && widget.onFriendTap != null)
                       //   ...interestedFriends.map((friendEmail) => UserTile(

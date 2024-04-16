@@ -57,7 +57,7 @@ class EventCard extends StatelessWidget {
             Text("Location: ${event.location}", softWrap: true, textAlign: TextAlign.center),
             Text("Info: ${event.info}", softWrap: true, textAlign: TextAlign.center),
             if (event.date.isNotEmpty) Text("Date: ${event.date}", softWrap: true, textAlign: TextAlign.center),
-            SizedBox(height:45),
+            const SizedBox(height:45),
           ],
         ),
       ),
