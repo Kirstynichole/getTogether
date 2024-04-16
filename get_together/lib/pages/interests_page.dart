@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -112,66 +114,94 @@ class _InterestsPageState extends State<InterestsPage> {
         foregroundColor: Colors.grey,
         elevation: 0,
       ),
-      body: FutureBuilder<List<Event>>(
-        future: fetchInterests(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text("Error: ${snapshot.error}"));
-          } else if (snapshot.hasData) {
-            List<Event> events = snapshot.data!;
-            if (events.isEmpty) {
-              return const Center(child: Text("No interests found"));
-            }
-            return ListView.builder(
-              itemCount: events.length,
-              itemBuilder: (context, index) {
-                Event event = events[index];
-                bool isFriendInterest = isFriendInterestedInEvent(event);
-                List<String> interestedFriends =
-                    getFriendUsernamesInterestedInEvent(event);
-
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ListTile(
-                      title: Text(event.name),
-                      subtitle: Text(event.location),
-                      trailing: isFriendInterest ? const Icon(Icons.group) : null,
-                    ),
-                    if (isFriendInterest)
-                      Padding(
-                        padding: const EdgeInsets.only(left: 16.0),
-                        child: Text(
-                          'Friends Interested: ${interestedFriends.join(", ")}',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+      body: 
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FutureBuilder<List<Event>>(
+          future: fetchInterests(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (snapshot.hasError) {
+              return Center(child: Text("Error: ${snapshot.error}"));
+            } else if (snapshot.hasData) {
+              List<Event> events = snapshot.data!;
+              if (events.isEmpty) {
+                return const Center(child: Text("No interests found"));
+              }
+              return ListView.builder(
+                itemCount: events.length,
+                itemBuilder: (context, index) {
+                  Event event = events[index];
+                  bool isFriendInterest = isFriendInterestedInEvent(event);
+                  List<String> interestedFriends =
+                      getFriendUsernamesInterestedInEvent(event);
+        
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10,),
+                      Container(
+                        decoration: BoxDecoration( 
+                          color: Colors.grey.shade300,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 8.0, bottom: 8),
+                          child: ListTile(
+                            leading: CircleAvatar( 
+                              radius: 25,
+                              backgroundImage: event.photo.startsWith("http")
+                              ? NetworkImage(event.photo)
+                              : AssetImage(event.photo) as ImageProvider<Object>,
+                            ),
+                            title: Text(
+                              event.name,
+                              style: TextStyle(fontFamily: GoogleFonts.robotoMono().fontFamily),
+                              ),
+                            subtitle: Text(event.location),
+                            trailing: isFriendInterest ? const Icon(Icons.group) : null,
+                          ),
                         ),
                       ),
-                    const Divider(),
-                    // if (isFriendInterest && widget.onFriendTap != null)
-                    //   ...interestedFriends.map((friendEmail) => UserTile(
-                    //         text: friendEmail,
-                    //         onTap: (getFriendUsernamesInterestedInEvent) {
-                    //           Navigator.push(
-                    //             context,
-                    //             MaterialPageRoute(
-                    //               builder: (context) => MessagingPage(
-                    //                 receiverEmail: friendEmail, receiverID: friendEmail,
-                    //               ),
-                    //             ),
-                    //           );
-                    //         },
-                    //       ))
-                    //       ,
-                  ],
-                );
-              },
-            );
-          } else {
-            return const Center(child: Text("No interests found"));
-          }
-        },
+                      SizedBox(height: 5,),
+                      if (isFriendInterest)
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromRGBO(193, 109, 186, 1),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                            child: ListTile(
+                              title: Text('Friends Interested: ${interestedFriends.join(", ")}'),
+                              // style: const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                      SizedBox(height: 10,),
+                      const Divider(),
+                      // if (isFriendInterest && widget.onFriendTap != null)
+                      //   ...interestedFriends.map((friendEmail) => UserTile(
+                      //         text: friendEmail,
+                      //         onTap: (getFriendUsernamesInterestedInEvent) {
+                      //           Navigator.push(
+                      //             context,
+                      //             MaterialPageRoute(
+                      //               builder: (context) => MessagingPage(
+                      //                 receiverEmail: friendEmail, receiverID: friendEmail,
+                      //               ),
+                      //             ),
+                      //           );
+                      //         },
+                      //       ))
+                      //       ,
+                    ],
+                  );
+                },
+              );
+            } else {
+              return const Center(child: Text("No interests found"));
+            }
+          },
+        ),
       ),
     );
   }
