@@ -287,6 +287,150 @@
             "location": "Flushing Meadows park",
             "info": "Free - Rain or Shine",
             "date": "August 3-4"
-        }
-    ]
+        },
+        {
+            "id": "33",
+            "event_type": "Music",
+            "name": "Charlie Parker Jazz Festival",
+            "photo": "https://cityparksfoundation.org/wp-content/smush-webp/2023/04/CPJ23_yw_logo.png.webp",
+            "location": "Tompkins Square",
+            "info": "Free and awesome music!",
+            "date": "August 2024"
+        },
+        {
+            "id": "34",
+            "event_type": "Sporting Event",
+            "name": "US Open Tennis",
+            "photo": "https://photo-assets.usopen.org/images/pics/large/c_Shelton_20240414.jpg",
+            "location": "Queens Tennis Stadium",
+            "info": "Tix on sale now!",
+            "date": "Through November"
+        },
+        {
+            "id": "35",
+            "event_type": "Fair",
+            "name": "Richmond County Fair",
+            "photo": "https://images.squarespace-cdn.com/content/v1/5b24209fda02bc5bf5953ca1/95854301-ef34-4c9f-be53-1e482139790b/Untitled+design+%2823%29.png?format=1500w",
+            "location": "Staten Island",
+            "info": "Staten Islands Annual Community Fair",
+            "date": "September 8th"
+        },
+        {
+            "id": "36",
+            "event_type": "Musicals/Plays",
+            "name": "NYC Off Broadway Week",
+            "photo": "https://www.nyctourism.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F1aemqu6a6t65%2F7GMl90p91LuvSY0vlxwTst%2Fe6bc06e0e9be6e5a4b3b1c5ee53798b5%2FImage.png&w=3840&q=75",
+            "location": "Off-broadway",
+            "info": "Catch 2-for-1 tickets in fall of 2024",
+            "date": "April 28th"
+        },
+        {
+            "id": "37",
+            "event_type": "Festival",
+            "name": "Atlantic Antic",
+            "photo": "https://static.wixstatic.com/media/2682eb_3739bca558904dceb0559c64896dc6f2~mv2.png/v1/fill/w_836,h_456,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/AA_logo_website.png",
+            "location": "Atlantic Ave, Brooklyn",
+            "info": "Oldest & largest street fest in BK",
+            "date": "September 29th"
+        },
+        {
+            "id": "38",
+            "event_type": "Convention",
+            "name": "New York Comic Con",
+            "photo": "https://www.newyorkcomiccon.com/content/dam/sitebuilder/rna/nycc/2021/_img/framework/nycc-logo-white-small.png/_jcr_content/renditions/original.image_file.290.100.file/056221662/nycc-logo-white-small.png",
+            "location": "Javits Center",
+            "info": "Suit up for the best version of pop culture on this planet",
+            "date": "October 17-20"
+        },
+        {
+            "id": "39",
+            "event_type": "Festival",
+            "name": "NYCWFF",
+            "photo": "https://corporate.nycwineandfoodfestival.com/wp-content/themes/nycwff2023/dist/images/home/nycwff-tour-orange.jpg",
+            "location": "Eat. Drink. Feed. NYC.",
+            "info": "Food Network NYC Wine & Food Festival",
+            "date": "October 17-20"
+        },
+        {
+            "id": "40",
+            "event_type": "Festival",
+            "name": "New York Comedy Festival",
+            "photo": "https://nycomedyfestival.com/wp-content/uploads/2024/02/2024HomepageImage.jpg",
+            "location": "MSG",
+            "info": "Get ready to laugh.",
+            "date": "Nov 8-17"
+        },
+        {
+            "id": "43",
+            "event_type": "Concert",
+            "name": "blink-182",
+            "photo": "https://www.billboard.com/wp-content/uploads/2022/11/blink-182-2001-billboard-1548.jpg?w=942&h=623&crop=1",
+            "location": "Citi Field",
+            "info": "Rock out in Queens.",
+            "date": "July 21st at 7 pm"
+        },
+        {
+            "id": "44",
+            "event_type": "Concert",
+            "name": "Foo Fighters",
+            "photo": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFSivpzHFvYRuG8r7bpAUkxZAL7_wr3QVr6y8dcksw-HDX1xu3",
+            "location": "Citi Field",
+            "info": "Start Foo Fighting!",
+            "date": "July 17th at 7pm"
+        },
+        {
+            "id": "45",
+            "event_type": "Concert",
+            "name": "Justin Timberlake",
+            "photo": "https://ca-times.brightspotcdn.com/dims4/default/dac8208/2147483647/strip/true/crop/6208x8280+0+0/resize/1200x1601!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F40%2F3c%2F8ef4d5374c2fbd21be53340f0683%2Fjustin-timberlake.jpg",
+            "location": "MSG",
+            "info": "",
+            "date": "June 26th at 7pm"
+        },
+        {
+            "id": "46",
+            "event_type": "Museum",
+            "name": "New York Guggenheim",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiyd8o7QQ69HPPw-tNhsed7G_jgtPIlpa_K8o_FfA4Zg&s",
+            "location": "Upper East",
+            "info": "Solomon R. Guggenheim Museum",
+            "date": "Check site for times"
+        },
+        {
+            "id": "47",
+            "event_type": "Museum",
+            "name": "Fotografiska",
+            "photo": "https://images.ctfassets.net/1aemqu6a6t65/6K2y5d8nMuFLHiWChVWIs5/2266cdd58b4c2b6232c5ef0d73c5d1cf/Fotografiska-Manhattan-NYC-Photo-Kris-Graves-2.jpg?w=1200&h=800&q=75",
+            "location": "281 Park Ave S",
+            "info": "Photo exhibitions in Renaissance Revival-style gallery w/ cocktail bar & dining.",
+            "date": "Ongoing"
+        },
+        {
+            "id": "48",
+            "event_type": "Museum",
+            "name": "The Frick Collection",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbtXAJcjnOt4szBQ3l9NabiwI_pAKpzkMtTQoHPk1enQ&s",
+            "location": "Upper East",
+            "info": "Enjoy a custom curated selection.",
+            "date": "Ongoing"
+        },
+        {
+            "id": "49",
+            "event_type": "Desserts & Sweets",
+            "name": "Insomnia Cookies",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ5tBhqOJRdbvElo36Iai-FMaiVKCRl5FABC_bY89eHw&s",
+            "location": "FiDi & all over NYC",
+            "info": "Cookies with friends",
+            "date": "Open until 3 am"
+        },
+        {
+            "id": "50",
+            "event_type": "Desserts & Sweets",
+            "name": "Milk Bar",
+            "photo": "https://milkbarstore.com/cdn/shop/files/MilkBarPreview_1200x628_ee40cf74-7608-472d-a7ec-0144542c2386.jpg?v=1687543414",
+            "location": "NYC",
+            "info": "Cereal milk blended into ice cream & cake",
+            "date": "Everyday"
+        } 
+        ]
 }
